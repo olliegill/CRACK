@@ -1,0 +1,65 @@
+ // Bourbon & Neat
+@import '../../bower_components/bourbon/dist/bourbon';
+@import '../../bower_components/neat/app/assets/stylesheets/neat';
+
+// Custom Styles
+body {
+  background: #fafafa;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+header {
+  outline: solid red 1px;
+  text-align: center;
+}
+
+.container {
+  outline: solid red 1px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.user-info {
+  border: solid grey 1px;
+  display: inline-block;
+  width: 300px;
+  margin: 0 36%;
+  background: #6185E3;
+  padding-bottom: 20px;
+
+}
+
+.user-info img {
+  width: 200px;
+  border-radius: 10px;
+  margin: 10px 17%;
+  display: inline-block;
+  position: relative;
+}
+
+.username {
+  text-align: center;
+  font-size: 40px;
+  margin: 0;
+}
+
+.email {
+  font-size: 15px;
+  margin: 0;
+  text-align: center;
+}
+
+.all-posts {
+  width: 400px;
+  list-style: none;
+  display: inline-block;
+  outline: solid red 1px;
+  margin: 30px 30%;
+  padding: 0;
+}
+
+.all-posts li {
+  outline: solid pink 1px;
+  padding: 10px 0;
+}

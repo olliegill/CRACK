@@ -1,0 +1,81 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>ember chat</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="../bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+    <header>
+      <h1>CRACK</h1>
+      <h3>A place for Ironyard students to waste their time</h3>
+    </header>
+
+<script type="text/x-handlebars" data-template-name="application">
+
+
+    <div class="container">
+      <div class="user-info">
+        <img src="https://avatars2.githubusercontent.com/u/7051177?v=2&s=460">
+        <h4 class="username">Ollie Gill</h4>
+        <h6 class="email">olliegill87@googlemail.com</h6>
+      </div>
+
+    {{input class="username-input" placeholder="username"
+    value=newUsername}}
+
+
+    {{input class="message-input" placeholder="message"
+    value=newMessage }}
+
+    <button {{action "createPost"}} class="post-button">POST</button>
+
+
+      <div class="posts-div">
+        <ul class="all-posts">
+        {{#each}}
+          <li>{{username}}: {{message}} {{timestamp}}</li>
+
+        {{/each}}
+        </ul>
+      </div>
+    </div>
+
+</script>
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/underscore/underscore.js"></script>
+    <script src="../bower_components/handlebars/handlebars.js"></script>
+    <script src="../bower_components/ember/ember.js"></script>
+    <script src="../bower_components/ember-data/ember-data.js"></script>
+    <script src="../bower_components/firebase/firebase.js"></script>
+    <script src="../bower_components/emberfire/dist/emberfire.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js scripts/main.js -->
+        <script src="js/main.js"></script>
+        <script src="js/application.js"></script>
+        <script src="js/router.js"></script>
+        <script src="js/models.js"></script>
+        <script src="js/controllers/message_controller.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
