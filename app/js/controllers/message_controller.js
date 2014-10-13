@@ -1,4 +1,6 @@
 App.ApplicationController = Ember.ArrayController.extend({
+   sortProperties: ['timestamp'],
+  sortAscending: false,
   actions: {
     createPost: function(){
      //var post = this.get('newUsername', 'newMessage');
@@ -14,4 +16,8 @@ App.ApplicationController = Ember.ArrayController.extend({
 }
   },
 
+});
+
+Ember.Handlebars.helper('from-now', function(timestamp){
+	return moment(timestamp).fromNow();
 });

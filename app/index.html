@@ -20,42 +20,53 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="../bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+    <link href='http://fonts.googleapis.com/css?family=Cabin+Condensed:600' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <header>
-      <h1>CRACK</h1>
-      <h3>A place for Ironyard students to waste their time</h3>
+      <h1>CRACK.</h1>
+      <h3>A place for Ironyard students to waste their time.</h3>
     </header>
-
 <script type="text/x-handlebars" data-template-name="application">
-
+<!-- <script type="text/x-handlebars" data-template-name="application">
+ -->
 
     <div class="container">
       <div class="user-info">
         <img src="https://avatars2.githubusercontent.com/u/7051177?v=2&s=460">
-        <h4 class="username">Ollie Gill</h4>
+        <h4 class="username">Ollie Gill.</h4>
         <h6 class="email">olliegill87@googlemail.com</h6>
       </div>
 
-    {{input class="username-input" placeholder="username"
-    value=newUsername}}
-
-
-    {{input class="message-input" placeholder="message"
-    value=newMessage }}
-
-    <button {{action "createPost"}} class="post-button">POST</button>
-
-
-      <div class="posts-div">
-        <ul class="all-posts">
-        {{#each}}
-          <li>{{username}}: {{message}} {{timestamp}}</li>
-
-        {{/each}}
-        </ul>
+      {{outlet}}
       </div>
-    </div>
+</script>
+
+<script type="text/x-handlebars" data-template-name="index">
+  <span class="inputs">
+   {{input class="username-input" placeholder="username"
+     value=newUsername}}
+
+   {{input class="message-input" placeholder="message"
+     value=newMessage }}
+     <button {{action "createPost"}} class="post-button">POST</button>
+
+   </span>
+  <div class="posts-div">
+   <ul class="all-posts">
+     {{#each}}
+       <li><span class="username-li">{{username}}:</span>
+         {{message}} <span class="time-li">{{from-now timestamp}}</span></li>
+     {{/each}}
+   </ul>
+  </div>
+</script>
+
+<script type="text/x-handlebars" data-template-name="login">
+ <h2>SIGN IN</h2>
+  {{input type="text" value=username placeholder="Username"}}
+  {{input type="text" value=email placeholder="Email"}}
+ <button {{action "logIn"}}>LOG IN</button>
 
 </script>
     <!-- build:js scripts/vendor.js -->
@@ -67,6 +78,7 @@
     <script src="../bower_components/ember-data/ember-data.js"></script>
     <script src="../bower_components/firebase/firebase.js"></script>
     <script src="../bower_components/emberfire/dist/emberfire.min.js"></script>
+    <script src="../bower_components/moment/moment.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

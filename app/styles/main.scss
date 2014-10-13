@@ -10,22 +10,27 @@ body {
 }
 
 header {
-  outline: solid red 1px;
   text-align: center;
+  font-family: 'Cabin Condensed', sans-serif;
+}
+
+header h1 {
+  font-size: 40px;
+  margin-bottom: 0;
 }
 
 .container {
-  outline: solid red 1px;
+  outline: solid #90B6F0 1px;
   width: 70%;
+  height: 590px;
   margin: 0 auto;
 }
 
 .user-info {
-  border: solid grey 1px;
   display: inline-block;
   width: 300px;
-  margin: 0 36%;
-  background: #6185E3;
+  height: 590px;
+  background: #90B6F0;
   padding-bottom: 20px;
 
 }
@@ -42,6 +47,7 @@ header {
   text-align: center;
   font-size: 40px;
   margin: 0;
+  font-family: 'Cabin Condensed', sans-serif;
 }
 
 .email {
@@ -50,16 +56,44 @@ header {
   text-align: center;
 }
 
+.inputs {
+  position: absolute;
+  left: 38%;
+  bottom: 75%;
+}
+
+.posts-div {
+  outline: solid #90B6F0 1px;
+  display: inline-block;
+  width: 65%;
+  height: 470px;
+  float: right;
+  margin: 100px 22px 0;
+  overflow: scroll;
+
+}
+
 .all-posts {
-  width: 400px;
+  width: 100%;
   list-style: none;
   display: inline-block;
-  outline: solid red 1px;
-  margin: 30px 30%;
   padding: 0;
 }
 
 .all-posts li {
-  outline: solid pink 1px;
   padding: 10px 0;
+  border-bottom: solid #DFE0E2 1px;
+}
+
+.username-li {
+  font-weight: bold;
+  padding-left: 5px;
+}
+
+.time-li {
+  display: block;
+  float: right;
+  padding: 3px 5px 0 0;
+  color: #C7C7C6;
+  font-size: 12px;
 }
